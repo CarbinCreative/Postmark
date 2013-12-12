@@ -9,8 +9,10 @@ Minor improvements to Laravel 4.x Router class. Adds support for `Route::alias` 
 Add this repository to your `composer.json`.
 
 	"reposotories": [
-		"type": "git",
-		"url": "https://github.com/CarbinCreative/Postmark"
+		{
+			"type": "git",
+			"url": "https://github.com/CarbinCreative/Postmark.git"
+		}
 	]
 
 And don't forget about your require, also in `composer.json`.
