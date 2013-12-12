@@ -1,0 +1,9 @@
+{
+	"name": "carbincreative/postmark",
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-0": {
+			"Postmark": "src/"
+		}
+	}
+}
