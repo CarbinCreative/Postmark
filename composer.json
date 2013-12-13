@@ -1,6 +1,6 @@
 {
 	"name": "carbincreative/postmark",
-	"description": "Swiftmailer Transport Class for Postmark",
+	"description": "Minor improvements to Laravel 4.x Router class.",
 	"license": "MIT",
 	"authors": [
 		{
