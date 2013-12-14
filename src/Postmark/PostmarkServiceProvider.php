@@ -7,9 +7,6 @@ use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\UrlGenerator;
 use Illuminate\Routing\Redirector;
 
-// Postmark
-use Postmark\Routing\Router;
-
 
 
 class PostmarkServiceProvider extends ServiceProvider {
@@ -25,6 +22,7 @@ class PostmarkServiceProvider extends ServiceProvider {
 		$app->booting(function() {
 
 			$loader = AliasLoader::getInstance();
+
 			$loader->alias('Route', 'Postmark\Support\Facades\Router');
 
 		});
@@ -35,7 +33,9 @@ class PostmarkServiceProvider extends ServiceProvider {
 
 		$this->app['router'] = $this->app->share(function($app) {
 
-			$router = new Router($app);
+			$arguments = (class_exists('Illuminate\Routing\Controller') === true) ? [$app['events'], $app] : [$app];
+
+			$router = call_user_func_array([new \ReflectionClass('Postmark\Routing\Router'), 'newInstance'], $arguments);
 
 			if($app['env'] === 'testing') {
 

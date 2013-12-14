@@ -49,7 +49,7 @@ class Router extends DefaultRouter {
 			'callback' => $callback
 		];
 
-		parent::createRoute($method, $pattern, $action);
+		return parent::createRoute($method, $pattern, $action);
 
 	}
 

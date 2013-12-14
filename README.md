@@ -18,7 +18,7 @@ Add this repository to your `composer.json`.
 And don't forget about your require, also in `composer.json`.
 
 	"require": [
-		"carbincreative/postmark": "*"
+		"carbincreative/postmark": "dev-master"
 	]
 
 As a final step you'll need to add our [ServiceProvider](http://laravel.com/api/4.1/Illuminate/Support/ServiceProvider.html) to `app/config/app.php`.
